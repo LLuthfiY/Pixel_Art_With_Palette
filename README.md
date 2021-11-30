@@ -1,1 +1,1 @@
-# Pixel_Art_With_Palette
+# Pixel Art With Palette
