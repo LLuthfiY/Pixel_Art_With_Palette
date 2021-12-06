@@ -3,7 +3,7 @@ from PIL import Image
 
 
 palette = 'ghost-town.txt'
-image = 'garden.jpg'
+image = 'garden2.jpg'
 
 img = Image.open(image)
 img = pixel_art_genertor.PixelArtGenerator(img)
@@ -12,4 +12,4 @@ img.pixelate(height=256)
 img.clustering()
 img.resize_to_original()
 img.show()
-img.save(image + '-pixelNoPalette.jpg')
+img.save(image + '-pixel.jpg')

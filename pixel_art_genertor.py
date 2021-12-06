@@ -53,10 +53,8 @@ class PixelArtGenerator:
         try:
             cluster_centers = self.compareClusterCenterWithPallete(
                 cluster_centers, self.palette)
-
         except:
             pass
-
         for cluster_center in range(len(cluster_centers)):
             zeros[labels == cluster_center] = cluster_centers[cluster_center]
         zeros = np.reshape(zeros, np.array(self.resultImage).shape)
@@ -94,15 +92,16 @@ class PixelArtGenerator:
         zeros_reshaped = sorted(zeros_reshaped)
         print('cluster', cluster_center)
         print('palette', palette)
-        check = []
+        check1 = []
+        check2 = []
         pairs = []
         for el in zeros_reshaped:
             temp = zip(*np.where(zeros == el))
             for t in temp:
-                if t[0] not in check:
-                    if t[1] not in check:
-                        check.append(t[0])
-                        check.append(t[1])
+                if t[0] not in check1:
+                    if t[1] not in check2:
+                        check1.append(t[0])
+                        check2.append(t[1])
                         pairs.append(t)
         print('pair', pairs)
         for pair in pairs:
