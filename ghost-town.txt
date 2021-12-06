@@ -1,0 +1,17 @@
+;paint.net Palette File
+;Downloaded from Lospec.com/palette-list
+;Palette Name: Ghost Town
+;Description: A green, Erie and ghostly palette.
+;Colors: 12
+FF2f325d
+FF39456d
+FF425879
+FF496b83
+FF517d91
+FF528c9f
+FF54a295
+FF70bc93
+FF8cd589
+FFb7e097
+FFdaefab
+FFf1f2b6

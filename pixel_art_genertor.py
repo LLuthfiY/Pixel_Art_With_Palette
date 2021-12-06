@@ -42,6 +42,7 @@ class PixelArtGenerator:
             cluster = len(self.palette)
         except:
             pass
+        print('len cluster', cluster)
         img = self.fromImagetoLab(self.resultImage)
         h, w, _ = img.shape
         img = np.reshape(img, (-1, 3))
@@ -49,12 +50,12 @@ class PixelArtGenerator:
         print(labels.shape, cluster_centers.shape)
         zeros = np.zeros((labels.shape[0], 3))
 
-        # try:
-        cluster_centers = self.compareClusterCenterWithPallete(
-            cluster_centers, self.palette)
+        try:
+            cluster_centers = self.compareClusterCenterWithPallete(
+                cluster_centers, self.palette)
 
-        # except:
-        #   pass
+        except:
+            pass
 
         for cluster_center in range(len(cluster_centers)):
             zeros[labels == cluster_center] = cluster_centers[cluster_center]
