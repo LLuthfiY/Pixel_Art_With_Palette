@@ -2,7 +2,7 @@ import pixel_art_genertor
 from PIL import Image
 
 
-palette = 'ghost-town.txt'
+palette = 'morning.txt'
 image = 'garden2.jpg'
 
 img = Image.open(image)
